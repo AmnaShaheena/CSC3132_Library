@@ -90,7 +90,7 @@ function showTable1($tname,$connect,$colnames){
     //search books by the name
     function searchBook($name,$connect){
         try {
-           $sql = "SELECT * FROM books where title like '%$name%'";
+           $sql = "SELECT * FROM Books where title like '%$name%'";
             
               
           $result = mysqli_query($connect, $sql);
@@ -179,7 +179,7 @@ function showTable1($tname,$connect,$colnames){
 
     function getDetails($book_id,$connect){
         try {
-            $sql = "SELECT * FROM books WHERE book_id=$book_id ";
+            $sql = "SELECT * FROM Books WHERE book_id=$book_id ";
             
               
           $result = mysqli_query($connect, $sql);
@@ -221,9 +221,9 @@ function showTable1($tname,$connect,$colnames){
 
     function joinTable($connect){
         try {
-            $sql = "SELECT title,genre,published_year,name,birth_year FROM books as b
-            inner join book_authors as ba on b.book_id=ba.book_id
-            inner join authors as a on a.author_id=ba.author_id";
+            $sql = "SELECT title,genre,published_year,name,birth_year FROM Books as b
+            inner join Book_Authors as ba on b.book_id=ba.book_id
+            inner join Authors as a on a.author_id=ba.author_id";
             
               
           $result = mysqli_query($connect, $sql);
