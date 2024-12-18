@@ -13,8 +13,7 @@
 
     //create a page to display all available books
     echo $_SERVER['PHP_SELF'];//get the file name
-?>
- <?php
+
 
 joinTable($connect);
     
